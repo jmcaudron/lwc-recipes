@@ -41,7 +41,8 @@ export default class PubsubContactDetails extends LightningElement {
             this.dispatchEvent(
                 new ShowToastEvent({
                     title: 'Error loading contact',
-                    message: error.message,
+                    message:
+                        'message' in error ? error.message : error.body.message,
                     variant: 'error'
                 })
             );

@@ -9,7 +9,7 @@
                 </div>
                 <template if:true={viewDetails}>
                     <template for:each={errors} for:item="error">
-                        <p key={error.message}>{error.message}</p>
+                        <p key={error}>{error}</p>
                     </template>
                 </template>
             </template>
